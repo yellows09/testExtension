@@ -1,7 +1,20 @@
 {
-  "manifest_version": 2,
-  "name": "TestReverse",
-  "version": "0.1.0",
+  "manifest_version": 3,
+  "name": "Page Rotator",
+  "version": "1.0",
+  "description": "Rotate web pages by 90 degrees",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Page Rotator"
+  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],

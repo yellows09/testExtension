@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Rotator</title>
+    <style>
+        /* Основные стили для popup окна */
+        body {
+            width: 320px;
+            height: 220px;
+            margin: 0;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-sizing: border-box;
+        }
+        
+        /* Стили для заголовка */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 300;
+        }
+        
+        /* Стили для кнопки поворота */
+        .rotate-button {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 25px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .rotate-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .rotate-button:active {
+            transform: translateY(0);
+        }
+        
+        /* Стили для информационного текста */
+        .info {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            opacity: 0.8;
+        }
+        
+        /* Стили для отображения текущего поворота */
+        .current-rotation {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        /* Стили для информации о состояниях */
+        .states-info {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 11px;
+            opacity: 0.7;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Заголовок popup окна -->
+    <div class="header">
+        <h1>🔄 Page Rotator</h1>
+    </div>
+    
+    <!-- Кнопка для поворота страницы -->
+    <button class="rotate-button" id="rotateBtn">
+        Rotate Page 90°
+    </button>
+    
+    <!-- Информация о текущем повороте -->
+    <div class="current-rotation" id="rotationInfo">
+        Current rotation: 0°
+    </div>
+    
+    <!-- Информация о 4 состояниях поворота -->
+    <div class="states-info">
+        4 состояния: 0° → 90° → 180° → 270° → 0°
+    </div>
+    
+    <!-- Инструкция по использованию -->
+    <div class="info">
+        Нажмите, чтобы повернуть текущую страницу
+    </div>
+    
+    <!-- Подключение JavaScript файла -->
+    <script src="popup.js"></script>
+</body>
+</html>
